@@ -1,0 +1,35 @@
+.shop-successfully {
+    padding-top: 60px;
+    padding-bottom: 165px;
+
+
+    h3 {
+        font-size: @fz-heading-3 + 3px;
+        margin-bottom: 30px;
+    }
+
+    p {
+        &:not(:last-of-type) {
+            margin-bottom: 0;
+        }
+
+        &:last-of-type {
+            margin-bottom: 35px;
+        }
+
+        &.infor {
+            span {
+                .font-type-1();
+                font-size: @fz-heading-5;
+                .color-dark;
+            }
+        }
+    }
+
+    @media @xs-max {
+        h3 {
+            font-size: @fz-heading-4;
+            margin-bottom: 20px;
+        }
+    }
+}

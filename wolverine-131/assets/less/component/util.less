@@ -1,0 +1,532 @@
+//// Bootstrap
+// -------------------------
+// ------
+// Mixin
+// ------
+
+.clearfix() {
+    &:after {
+        clear: both;
+    }
+
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+}
+
+.center-block() {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hide-text() {
+    background-color: transparent;
+    border: 0;
+    color: transparent;
+    font: ~"0/0" a;
+    text-shadow: none;
+}
+
+// New mixin to use as of v3.0.1
+.text-hide() {
+    .hide-text();
+}
+
+// -------------------------
+// ------
+// Floats
+// ------
+
+.clearfix {
+    .clearfix();
+}
+
+.center-block {
+    .center-block();
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+// Toggling content
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.text-hide {
+    .text-hide();
+}
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+    display: none !important;
+}
+
+// ------
+// For Affix plugin
+// ------
+
+.affix {
+    position: fixed;
+}
+
+//==========================
+//// Custom library
+// -------------------------
+// Transition
+// =========
+
+.easing-animation(@type: all) {
+    transition: @type @duration-time ease-in-out;
+}
+
+.easing-animation-long(@type: all) {
+    transition: @type @duration-longtime ease-in-out;
+}
+
+// Size
+// =========
+
+.size(@width, @height) {
+    height: @height;
+    width: @width;
+}
+
+.square(@size) {
+    .size(@size, @size);
+}
+
+// Position (top; left; bottom; right)
+// =========
+
+.pos(@top: null; @left: null; @bottom: null; @right: null) {
+    & when (isnumber(@bottom)),
+    (@bottom = auto) {
+        bottom: @bottom;
+    }
+
+    & when (isnumber(@left)),
+    (@left = auto) {
+        left: @left;
+    }
+
+    & when (isnumber(@right)),
+    (@right = auto) {
+        right: @right;
+    }
+
+    & when (isnumber(@top)),
+    (@top = auto) {
+        top: @top;
+    }
+}
+
+// Layout
+// =========
+// Mixin
+
+.layout-after(@bgc: transparent; @z-index: 512) {
+    position: relative;
+
+    &:after {
+        background-color: @bgc;
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: @z-index;
+        .easing-animation();
+        .pos(0;0);
+        .square(100%);
+    }
+}
+
+// Class
+.layout-after {
+    .layout-after();
+}
+
+// ======
+// Mixin
+
+.overlay(@bgc: transparent; @z-index: 512) {
+    background-color: @bgc;
+    z-index: @z-index;
+    position: absolute;
+    .easing-animation();
+    .pos(0;0);
+    .square(100%);
+}
+
+// Class
+.overlay {
+    .overlay();
+}
+
+// Middle Align
+// =========
+// Mixin
+
+.middle-align() {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// Class
+.middle-align {
+    .middle-align();
+}
+
+// Vertaical Align
+// =========
+
+.cell-vertical-wrapper {
+    display: table;
+    .square(100%);
+
+    .cell-middle {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .cell-bottom {
+        display: table-cell;
+        vertical-align: bottom;
+    }
+}
+
+// Star Ratings (component.jade)
+// =========
+
+.star-ratings {
+    span {
+        font-size: 20px;
+        line-height: 1;
+        margin: 2px;
+
+        &.rated {
+            .color-main;
+        }
+
+        &:not(.rated) {
+            .color-gray;
+        }
+    }
+}
+
+// -------------------------
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+    .easing-animation();
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+// -------------------------
+// Video Container
+
+.video-container {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border: 0;
+}
+
+.audio-container {
+    position: relative;
+}
+
+.audio-container iframe,
+.audio-container object,
+.audio-container embed {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+//parallax background
+
+.parallax-bg(@bgc: transparent; @z1: -1; @z2:0) {
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: repeat-x;
+    background-size: cover;
+    position: absolute;
+    z-index: @z1;
+    .pos(0;0);
+    .square(100%);
+
+    &:after {
+        background-color: @bgc;
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: @z2;
+        .pos(0;0);
+        .square(100%);
+    }
+}
+
+.parallax-bg {
+    .parallax-bg();
+}
+
+.page-common-background{
+    .parallax-bg(fade(#333,60%));
+}
+
+.parallax-bg.background-default {
+    .parallax-bg(fade(@bgc-dark, 70%););
+}
+// fixed ratio
+.fixed-ratio(@width:1 ; @height:1){
+    position: relative;
+    display: block;
+    height: 0;
+    padding-top: @height / @width * 100%;
+    >*:only-child{
+        position: absolute;
+        .pos(50%,0%);
+        transform: translateY(-50%);
+        width: 100%;
+        // max-height: 100%;
+        // overflow: auto
+    }
+}
+.fixed-ratio-1-1{
+    .fixed-ratio();
+};
+.fixed-ratio-1-2{
+    .fixed-ratio(1;2);
+};
+.fixed-ratio-2-1{
+    .fixed-ratio(2;1);
+};
+
+//page breadcumb
+.page-breadcumb{
+    padding-top: 18px ;
+    padding-bottom: 18px ;
+    font-weight: 600;
+    a{
+        display: inline-block;
+    }
+    a:last-child{
+        .color-main;
+    }
+    a:not(:first-child):before{
+        content : " / ";
+        display: inline-block;
+        padding: 0 8px;
+    }
+
+    &.no-content {
+        * {
+            visibility: hidden;
+        }
+    }
+}
+
+// pagination
+.pagination {
+    float: right;
+    padding: 0 10px;
+    margin-bottom: 60px;
+    .bgc-gray;
+    .color-gray;
+    .font-heading;
+
+    .bgc-gray &{
+        .bgc-light;
+    }
+
+    a {
+        display: inline-block;
+        margin: 3px 10px;
+        font-size: 14px;
+        &:hover, &.active {
+            .color-main;
+        }
+
+        i.icon-svg-icon-18 {
+            font-size: 10px;
+            display: inline-block;
+        }
+    }
+
+    &.left{
+        float: left;
+    }
+}
+
+// pagination-2
+.pagination-2 {
+    text-align: center;
+    line-height: 0;
+
+    ul {
+        padding: 0;
+        display: inline-block;
+        .font-heading;
+        .clearfix;
+    }
+
+    li {
+        .easing-animation();
+        display: inline-block;
+        text-align: center;
+        float: left;
+
+
+        &:not(:last-of-type) {
+            margin-right: 15px;
+        }
+
+        a {
+            border: 1px solid @color-lightgray;
+            width: 44px;
+            height: 44px;
+            .color-main;
+            display: inline-block;
+            line-height: 42px;
+            font-size: 14px;
+
+            i {
+                .easing-animation();
+                color: #777;
+                font-size: 10px;
+                line-height: 42px;
+                font-weight: bold;
+                vertical-align: middle;
+                display: inline-block;
+
+                &:before {
+                    line-height: 1;
+                }
+            }
+        }
+
+        &:hover, &.active {
+            a {
+                border-color: @color-main;
+                .bgc-main;
+                .color-light;
+
+                 i {
+                    .color-light;
+                }
+            }
+        }
+    }
+
+    &.right {
+        text-align: right;
+    }
+
+    &.left{
+        text-align: left;
+    }
+}
+
+// Margin Bottom - Class
+// ============
+
+.margin-bottom(@n, @i: 1) when (@i =< @n) {
+    @j: @i * 5;
+
+    .mb-@{j} {
+        margin-bottom: @j + 0px;
+    }
+
+    .margin-bottom(@n, (@i + 1));
+}
+
+.margin-bottom(20);
+
+// Padding Top - Class
+// ============
+
+.padding-top(@n, @i: 1) when (@i =< @n) {
+    @j: @i * 5;
+
+    .pt-@{j} {
+        padding-top: @j + 0px;
+    }
+
+    .padding-top(@n, (@i + 1));
+}
+
+.padding-top(20);
+
+// Padding Bottom - Class
+// ============
+
+.padding-bottom(@n, @i: 1) when (@i =< @n) {
+    @j: @i * 5;
+
+    .pb-@{j} {
+        padding-bottom: @j + 0px;
+    }
+
+    .padding-bottom(@n, (@i + 1));
+}
+
+.padding-bottom(20);

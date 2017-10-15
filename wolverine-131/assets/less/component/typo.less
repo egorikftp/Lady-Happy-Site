@@ -1,0 +1,301 @@
+//// Bootstrap
+// Alignment
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+//font style
+.italic {
+    font-style: italic;
+}
+
+//==========================
+//// Custom library
+// -------------------------
+// ------
+// Mixin
+// ------
+
+.font-type-1() {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.font-type-2() {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-type-3() {
+    font-family: 'Raleway', sans-serif;
+}
+
+// ===
+.icon-font-type-1() {
+    font-family: "wolverine";
+}
+
+.icon-font-type-2() {
+    font-family: FontAwesome;
+}
+
+// -------------------------
+body {
+    -webkit-font-smoothing: antialiased;
+    color: @color-common;
+    font-size: @fz-content;
+    font-weight: 400;
+    line-height: @base-line-height;
+    text-rendering: optimizeLegibility;
+    .font-type-3();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    line-height: 1.6;
+    .color-dark;
+    .font-type-1();
+}
+
+h1 {
+    font-size: @fz-heading-1;
+}
+
+h2 {
+    font-size: @fz-heading-2;
+}
+
+h3 {
+    font-size: @fz-heading-3;
+}
+
+h4 {
+    font-size: @fz-heading-4;
+}
+
+h5 {
+    font-size: @fz-heading-5;
+}
+
+h6 {
+    font-size: @fz-heading-6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 25px;
+    margin-top: 0;
+    &.smb{
+        margin-bottom: 10px;
+    }
+    &.nmb{
+        margin-bottom: 0;
+    }
+}
+
+ ::selection {
+    background-color: @color-main;
+    color: @color-light;
+}
+
+*:focus {
+    outline: none;
+}
+
+// -------------------------
+// ------
+// Heading
+// ------
+//  h5 (above| content:"\e2d0", "\e2d3", "\e2d4", "\e2ce", "\e2d1" )
+
+.heading-icon-1(@content:"\e2d0"; @fz: 72px; @color: @color-main) {
+    .easing-animation();
+    
+    &:before {
+        color: @color;
+        content: @content;
+        display: block;
+        font-size: @fz;
+        font-weight: 400;
+        line-height: 1;
+        .easing-animation();
+        .icon-font-type-1();
+    }
+}
+
+// ---
+.heading-icon-1 {
+    .heading-icon-1();
+}
+
+// h2, h5 (bottom| content:"\e2cf", "\e2d1", "e2d2")
+.heading-icon-2(@content:"\e2cf"; @fz: 72px; @color: @color-main) {
+    .easing-animation();
+    
+    &:after {
+        color: @color;
+        content: @content;
+        display: block;
+        font-size: @fz;
+        font-weight: 400;
+        line-height: 1;
+        .easing-animation();
+        .icon-font-type-1();
+    }
+}
+
+// --
+.heading-icon-2 {
+    .heading-icon-2();
+}
+
+.heading-bgc-gray{
+    padding: 22px 0;
+    .bgc-gray;
+}
+
+// ===
+.heading-hr(@mt: 20px;@border-width: 2px; @border-color: @color-main) {
+    &:after {
+        border-bottom: @border-width solid @border-color;
+        content: "";
+        display: block;
+        position : relative;
+        margin-top: @mt;
+        width: 40px;
+    }
+}
+
+// h4, h5
+.heading-hr-1{
+    .heading-hr();
+    
+    &.center {
+        text-align: center;
+        
+        &:after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
+    &.right {
+        text-align: right;
+        
+        &:after {
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+}
+
+// default h6
+.heading-hr-2 {
+    text-align: center;
+    .heading-hr(5px; 1px; @color-common);
+    
+    &:after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// ===
+// h4 (require span)
+
+.heading-border-1 {
+    position: relative;
+    text-align: center;
+    
+    &:after {
+        border-top: 1px solid @color-lightgray;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        z-index: 3;
+    }
+    
+    span {
+        border: 1px solid @color-lightgray;
+        padding: 15px;
+        width: 100%;
+        display: inline-block;
+        max-width: 270px;
+        position: relative;
+        z-index: 5;
+        .bgc-light;
+    }
+}
+
+// ------
+// Font family
+// ------
+
+.font-heading {
+    .font-type-1();
+}
+
+.font-serif {
+    font-style: italic;
+    .font-type-2();
+}
+
+.font-content {
+    .font-type-3();
+}
+
+// ------
+// Font size
+// ------
+
+.fz-common-1 {
+    font-size: @fz-common-1;
+}
+
+.fz-common-2 {
+    font-size: @fz-common-2;
+}
+
+.fz-common-3 {
+    font-size: @fz-common-3;
+}
+
+.fz-common-4 {
+    font-size: @fz-common-4;
+}
+
+.fz-common-5 {
+    font-size: @fz-common-5;
+}
+
+.fz-common-6 {
+    font-size: @fz-common-6;
+}

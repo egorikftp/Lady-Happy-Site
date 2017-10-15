@@ -1,0 +1,228 @@
+footer {
+    .clearfix;
+}
+.footer-quote {
+
+    .content {
+        padding-top:50px;
+        margin-bottom: 15px;
+        a {
+            .color-main;
+        }
+    }
+    .icon {
+        display:inline-block;
+        width:100%;
+
+        .social-02 {
+            display:inline-block;
+            padding-left:15px;
+
+            a:hover {
+                i:before {
+                    .color-main;
+                }
+            }
+
+            li {
+                padding-right:15px;
+            }
+        }
+
+        p {
+            .color-main;
+            .font-serif;
+
+            display:inline-block;
+            float:left;
+            margin:0;
+        }
+    }
+}
+
+.footer-quote-01 {
+    .content {
+        border-bottom:1px solid @color-lightgray;
+        padding-bottom: 25px;
+        a {
+            text-align:center;
+            font-weight:800;
+            font-size:10px;
+
+            &:before {
+                .bgc-main;
+                .easing-animation();
+                .icon-font-type-1();
+
+                display:inline-block;
+                margin-right:10px;
+                border-radius:50%;
+                .square (20px);
+                color:@color-light;
+                content:"\e07f";
+                vertical-align:middle;
+                font-weight:400;
+                font-size:18px;
+                line-height:1;
+            }
+        }
+    }
+}
+
+.footer-quote-02 {
+
+    .content {
+        border-bottom:1px solid @color-common;
+        a {
+            .font-serif;
+
+            display:inline-block;
+
+            &:first-of-type {
+                .color-lightgray;
+            }
+            &:last-of-type {
+                float: right;
+            }
+        }
+    }
+}
+.footer-quote-03 {
+
+    .content {
+        border-bottom:1px solid @color-lightgray - #111;
+        a {
+            .font-serif;
+
+            display:inline-block;
+
+            &:first-of-type {
+                .color-gray;
+            }
+            &:last-of-type {
+                float: right;
+            }
+        }
+    }
+}
+
+.footer-preset-wrapper {
+    .clearfix;
+    padding-top:80px;
+    padding-bottom:50px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    h5 {
+        margin-bottom: 0;
+        padding-bottom: 50px;
+    }
+}
+.footer-preset-02 {
+    .bgc-gray;
+    .footer-preset-wrapper {
+        border-color: @color-lightgray;
+    }
+}
+
+.footer-preset-03 {
+    background-color:@color-heading;
+    .footer-foot {
+        background-color: transparent;
+    }
+    .footer-preset-wrapper {
+        border-color: @color-common;
+        
+        h5 {
+            .color-light;
+        }
+    }
+
+    p {
+        color:@color-gray;
+    }
+}
+.footer-preset-04 {
+
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid @color-lightgray;
+    border-bottom: 1px solid @color-lightgray;
+    h1 {
+        letter-spacing: 3px;
+        .font-type-2();
+    }
+    .social-04 {
+        padding-bottom: 50px;
+        a {
+            margin-right: 12px;
+            margin-left: 12px;
+
+            &:hover {
+                .color-gray;
+            }
+        }
+    }
+    p {
+        .color-gray;
+        margin-bottom: 0px;
+    }
+}
+
+.footer-preset-05 {
+    .footer-preset-wrapper {
+        border-color: @color-lightgray;
+    }
+    .footer-foot {
+        .bgc-light;
+        border-bottom-color: @color-lightgray;
+    }
+}
+.footer-preset-06 {
+    .bgc-gray;
+    .footer-preset-wrapper {
+        border-color: @color-lightgray;
+    }
+}
+.footer-foot {
+    padding: 20px 0;
+    .bgc-gray;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    p {
+        font-size: 11px;
+        font-weight: 500;
+        margin: 0;
+        .font-type-1;
+    }
+}
+.footer-foot-border{
+    padding: 20px 0;
+    border-top : 1px solid @color-gray;
+    border: 1px solid @color-lightgray;
+    .font-type-1;
+    .bgc-gray;
+    p {
+        font-size: 11px;
+        font-weight: 500;
+        margin: 0;
+    }
+}
+
+// Sticky Button
+
+.sticky-button{
+  position:fixed;
+  bottom:0px;
+  z-index:1450;
+}
+
+.purchase-bottom{
+  right:80px;
+  .sticky-button;
+}
+
+.referrals-bottom{
+  right:20px;
+  .sticky-button;
+}

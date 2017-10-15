@@ -1,0 +1,133 @@
+.portfolio-special-style-01 {
+    .image {
+        display: inline-block;
+        position: relative;
+
+        .overlay {
+            background-color: fade(@bgc-gray, 90%);
+            opacity: 0;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            a {
+                border: 1px solid @color-gray - #222;
+                border-radius:50%;
+                display: inline-block;
+                font-size: 12px;
+                line-height: 30px;
+                text-align: center;
+                .square(28px);
+
+                &:first-of-type {
+                    margin-right: 15px;
+                }
+
+                &:hover {
+                    border-color: @color-main;
+                    .bgc-main;
+                    .color-light;
+                }
+            }
+
+            h5 {
+                .color-main;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .portfolio-special-item-01 {
+        .content {
+            bottom: 0;
+            padding: 70px;
+            position: absolute;
+        }
+        &.style-02 {
+            .content {
+                padding: 0 70px;
+                position: inherit;
+            }
+        }
+
+        @media @xs-max {
+            .overlay {
+                text-align: center;
+
+                .content {
+                    padding: 0;
+                    position: relative;
+
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.portfolio-special-style-02{
+    .image {
+        display: inline-block;
+        position: relative;
+
+        .overlay {
+            opacity: 0;
+
+            // bottom: 0;
+            &:hover {
+                opacity: 1;
+            }
+
+            .content {
+                background-color: fade(@color-light, 90%);
+                padding: 35px;
+            }
+
+            h5 {
+                .color-main;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .portfolio-special-item-03 {
+        .image {
+            .overlay {
+                bottom: 0;
+                padding: 45px;
+
+                .content {
+                    bottom: 0;
+                    position: absolute;
+                }
+                @media (min-width: 992px) and  (max-width: 1230px) {
+                    padding: 0;
+                    .content {
+                        position: relative;
+                        bottom: auto;
+                    }
+                }
+
+                .content-wrapper {
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .portfolio-special-item-04 {
+        .content {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

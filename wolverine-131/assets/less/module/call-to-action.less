@@ -1,0 +1,133 @@
+/* MIXIN */
+//wrapper//
+
+.call-to-action(@bg-color: @bgc-light, @bd-color: @color-lightgray) {
+    .clearfix();
+    background-color: @bg-color;
+    border: 1px solid @bd-color;
+    padding: 50px 60px;
+    width: 100%;
+}
+
+.call-to-action {
+    .call-to-action();
+
+    a {
+        margin: 0 auto;
+    }
+
+    p {
+        display: inline-block;
+        .font-serif;
+        .fz-common-2;
+    }
+    
+    @media @md {
+        p{
+            float: left;
+            margin-bottom: 0;
+        }
+        a{
+            float: right;
+        }
+    }
+}
+
+.call-to-action-wrapper {
+    &.style-2 {
+        .call-to-action {
+            .call-to-action(@bgc-gray; @bgc-gray;);
+        }
+    }
+
+    &.style-3 {
+        .call-to-action {
+            .call-to-action(@bgc-dark; @bgc-dark;);
+        }
+
+        p {
+            .color-light;
+        }
+    }
+
+    &.style-4 {
+        .border-btn.border-btn-light {
+            .btn-mod(@color-main);
+        }
+
+        .call-to-action {
+            .call-to-action(@color-main; @color-main;);
+        }
+
+        p {
+            .color-light;
+        }
+    }
+
+    .call-to-action {
+        .call-to-action();
+    }
+
+    @media @md-max {
+        .call-to-action {
+            text-align: center;
+
+            .normal-button-1 {
+                float: none;
+                margin: 0 auto;
+            }
+
+            p {
+                display: block;
+            }
+        }
+    }
+}
+
+.call-to-action-2 {
+    text-align: center;
+
+    * {
+        .color-light;
+    }
+    
+    .container {
+        position: relative;
+    }
+    
+    img {
+        width: 100%;
+    }
+
+    .content {
+        padding-top: 146px;
+        padding-bottom: 100px;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        a {
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+
+        h3 {
+            display: block;
+            width: 237px;
+            margin-bottom: 0;
+            padding: 15px 50px;
+            border: 5px solid @color-light;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (max-width: 479px) {
+        .content {
+            padding-top: 50px;
+            padding-bottom: 25px;
+        }
+    }
+}

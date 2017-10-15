@@ -1,0 +1,196 @@
+.post-index {
+    .clearfix();
+    margin-bottom: 60px;
+    .entry-header {
+        .post-meta {
+            margin-bottom: 10px;
+        }
+    }
+    .post-thumbnail, .video-container {
+        margin-bottom: 40px;
+    }
+    .post-thumbnail {
+        a {
+            display: block;
+            position: relative;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .entry-content {
+        margin-bottom: 45px;
+    }
+    .entry-footer {
+        .clearfix();
+        .readmore {
+            margin-bottom: 50px;
+        }
+        .author {
+            float: left;
+        }
+        .social-01 {
+            float: right;
+            line-height: 17px;
+            margin-right: -15px;
+            font-size: 16px;
+            a {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &.quote {
+        padding: 40px 20px;
+        .entry-header {
+            position: relative;
+        }
+        .icon-quote {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            .square(70px);
+            .bgc-dark;
+            .color-light;
+            font-size: 45px;
+            text-align: center;
+            float: left;
+
+            &:before {
+                line-height: 70px;
+                display: block;
+            }
+        }
+
+        .entry-content {
+            margin-bottom: 20px;
+            blockquote {
+                quotes: '"' '"';
+                margin: 0;
+                .font-serif();
+                font-size: @fz-common-3;
+            }
+        }
+
+        .entry-footer {
+            .author {
+                float: right;
+                text-transform: uppercase;
+                font-size: @fz-common-3;
+            }
+        }
+
+        @media @xs {
+            padding: 60px 60px 60px 30px;
+            .entry-header, .entry-content {
+                padding-left: 95px;
+            }
+
+            .icon-quote {
+                display: block;
+            }
+        }
+    }
+}
+
+.post-index-style-1 {
+    padding-bottom: 15px;
+    &:not(.quote) {
+        border-bottom: 1px solid @color-lightgray;
+        .entry-header {
+            text-align: center;
+        }
+    }
+    .post-title {
+        font-size: 24px;
+    }
+    &.quote {
+        .bgc-gray;
+    }
+}
+
+.post-index-style-2 {
+    .bgc-light;
+    padding: 0 20px 40px;
+    .post-thumbnail, .video-container {
+        margin: 0 -20px 40px;
+    }
+
+    @media @xs {
+        padding: 0 30px 50px;
+        .post-thumbnail, .video-container {
+            margin: 0 -30px 50px;
+        }
+    }
+    @media @md {
+        padding: 0 70px 50px;
+        .post-thumbnail, .video-container {
+            margin: 0 -70px 50px;
+        }
+    }
+}
+
+.masonry-post-index {
+    .clearfix();
+    margin-bottom: 50px;
+    .entry-header {
+        text-align: center;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .entry-content {
+        margin-bottom: 20px;
+    }
+    .entry-footer {
+        margin-bottom: 10px;
+    }
+    &.quote {
+        padding: 30px;
+        border: 0;
+        .bgc-gray();
+        .entry-header {
+            position: relative;
+            .post-title{
+                padding-top: 10px;
+            }
+        }
+
+        .entry-content {
+            margin-bottom: 20px;
+            blockquote {
+                quotes: '"' '"';
+                margin: 0;
+                .font-serif();
+                font-size: @fz-common-3;
+            }
+        }
+
+        .entry-footer {
+            .author {
+                float: right;
+                text-transform: uppercase;
+                font-size: @fz-common-3;
+            }
+        }
+    }
+}
+
+.masonry-post-index-style-1 {
+    border-bottom: 1px solid @color-lightgray;
+    .post-title {
+        padding-top: 40px;
+    }
+}
+
+.masonry-post-index-style-2:not(.quote){
+    .entry-content{
+        padding: 30px 30px 10px;
+        border-width: 0 1px 1px 1px;
+        border-style: solid;
+        border-color: @color-lightgray;
+        text-align: center;
+    }
+}

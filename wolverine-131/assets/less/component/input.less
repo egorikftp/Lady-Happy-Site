@@ -1,0 +1,18 @@
+input:not([type="submit"]):not([type="checkbox"]),textarea {
+    border: 1px solid @color-lightgray;
+    box-sizing: border-box;
+    font-size: @fz-content - 1px;
+    line-height: 16px;
+    outline: none;
+    padding: 13px;
+    .easing-animation;
+    .font-content();
+    
+    &:focus {
+        border-color: @color-main;
+    }
+}
+
+input:-webkit-autofill {
+    background-color: red !important;
+}

@@ -1,0 +1,196 @@
+.progressbar-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .progressbar-title {
+        margin-bottom: 0;
+        line-height: @base-line-height;
+    }
+
+    .progressbar {
+        .easing-animation();
+        background-color: @color-main;
+        width: 0;
+    }
+
+    .progressbar-back-text,
+    .progressbar-front-text {
+        display: none;
+    }
+
+    // basic and tooltip style
+    &.basic, &.style-tooltip {
+        position: relative;
+
+        .progressbar {
+            background-color: @color-main;
+            height: 20px;
+            width: 0;
+
+            &:before {
+                content: '';
+                bottom: 0;
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 20px;
+                background-color: @color-lightgray + #111111;
+                z-index: -1;
+            }
+        }
+
+    }
+
+    &.basic {
+        .progressbar {
+            position: static;
+        }
+
+        .progressbar-back-text {
+            position: absolute;
+            display: block;
+            right: 0;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: right;
+        }
+    }
+
+    &.style-tooltip {
+        margin-bottom: 40px;
+        position: relative;
+        .progressbar {
+            position: absolute;
+        }
+
+        .progressbar-back-text{
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 20px;
+            bottom: -20px;
+            font-size: 0;
+            background-color: @color-lightgray + #111111;
+            z-index: -1;
+        }
+
+        .progressbar-front-text {
+            position: absolute;
+            display: block;
+            right: -25px;
+            bottom: 28px;
+            line-height: 1;
+            height: 23px;
+            font-weight: 600;
+            text-align: center;
+            max-width: 50px;
+            padding: 5px;
+            border-radius: 3px;
+            .color-light;
+            background-color: @color-common;
+
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                left: 20px;
+                border-left-width: 4px;
+                border-right-width: 4px;
+                border-top-width: 7px;
+                border-style: solid;
+                border-color: transparent;
+                border-top-color: @color-common;
+                display: block;
+                width: 0;
+                height: 0;
+
+            }
+        }
+    }
+
+    //fill text style
+    &.fill-text {
+        height: 40px;
+        margin-bottom: 35px;
+        background-color: @color-lightgray + #111111;
+
+        .progressbar-title {
+            position: absolute;
+            line-height: 40px;
+            padding-left: 15px;
+            top: 0;
+            left: 0;
+        }
+
+        .progressbar {
+            position: absolute;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+
+            &:before {
+                height: 100%;
+            }
+
+            .progressbar-title {
+                .color-light;
+            }
+        }
+
+        .progressbar-back-text, .progressbar-front-text {
+            position: absolute;
+            display: block;
+            right: 0;
+            font-size: 14px;
+            line-height: 40px;
+            padding-right: 15px;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .progressbar-front-text {
+            left: 0;
+            top: 0;
+            .color-light;
+        }
+    }
+
+    // Vertical progressbar
+    &.vertical {
+        height: 120px;
+        float: left;
+        margin-right: 50px;
+        margin-bottom: 80px;
+        .bgc-light;
+
+        &.gray{
+            .bgc-gray;
+        }
+
+        .progressbar-title {
+            display: block;
+            position: absolute;
+            bottom: -40px;
+        }
+
+        .progressbar {
+            height: 0;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .progressbar-back-text {
+            display: block;
+            position: absolute;
+            max-height: 20px;
+            bottom: -50px;
+            line-height: 30px !important;
+            font-weight: 600;
+            color: @color-main;
+        }
+
+    }
+}

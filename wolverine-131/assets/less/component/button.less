@@ -1,0 +1,141 @@
+// a
+.btn-form() {
+    display: inline-block;
+    font-size: @fz-common-6;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    outline: none;
+    .easing-animation();
+    .font-type-1();
+}
+
+.btn-mod(@color: @color-heading; @bgc: @bgc-light) {
+    &:hover,
+    &:focus {
+        background-color: @bgc;
+        color: @color;
+    }
+}
+
+.normal-btn-size(@tb;@lr) {
+    padding: @tb @lr;
+}
+
+.border-btn-size(@tb;@lr) {
+    padding: (@tb - 1) (@lr - 1);
+}
+
+// -------------------------
+.border-btn {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    .btn-form();
+
+    // -- bgc
+    &.border-btn-light {
+        border-color: @color-light;
+        color: @color-light;
+        .btn-mod();
+    }
+
+    &.border-btn-gray {
+        border-color: @color-gray;
+        color: @color-common;
+        .btn-mod(@color-light;@color-gray);
+    }
+
+    &.border-btn-lightgray {
+        border-color: @color-lightgray;
+        color: @color-gray - #222;
+        .btn-mod(@color-light;@color-lightgray);
+    }
+
+    &.border-btn-main {
+        &.color-common {
+            .color-common;
+        }
+
+        border-color: @color-main;
+        .btn-mod(@color-light;@color-main);
+        .color-main;
+    }
+
+    // -- btn-size
+    &.btn-size-1 {
+        .border-btn-size(17px;140px);
+    }
+
+    &.btn-size-2 {
+        .border-btn-size(17px;108px);
+    }
+
+    &.btn-size-3 {
+        .border-btn-size(14px;88px);
+    }
+
+    &.btn-size-4 {
+        .border-btn-size(14px;58px);
+    }
+
+    &.btn-size-5 {
+        .border-btn-size(14px;38px);
+    }
+
+    &.btn-size-6 {
+        .border-btn-size(10px;18px);
+    }
+}
+
+// ====
+.normal-btn {
+    border: 0;
+    .btn-form();
+    .color-light;
+
+    // -- btn-size
+    &.btn-size-1 {
+        .normal-btn-size(17px;140px);
+    }
+
+    &.btn-size-2 {
+        .normal-btn-size(17px;108px);
+    }
+
+    &.btn-size-3 {
+        .normal-btn-size(14px;88px);
+    }
+
+    &.btn-size-4 {
+        .normal-btn-size(14px;58px);
+    }
+
+    &.btn-size-5 {
+        .normal-btn-size(14px;38px);
+    }
+
+    &.btn-size-6 {
+        .normal-btn-size(10px;18px);
+    }
+
+    // -- bgc
+    &.normal-btn-dark {
+        .bgc-dark;
+        .btn-mod(@color-light;@color-main);
+    }
+
+    &.normal-btn-darkgray {
+        background-color: @color-common;
+        .btn-mod(@color-light;@bgc-dark);
+    }
+
+    &.normal-btn-gray {
+        background-color: @color-gray;
+        .btn-mod(@color-light;@bgc-dark);
+    }
+
+    &.normal-btn-main {
+        .bgc-main;
+        .btn-mod(@color-light;@bgc-dark);
+    }
+}

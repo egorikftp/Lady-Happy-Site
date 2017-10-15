@@ -1,0 +1,65 @@
+// Mixin
+.social-form-1(@fz:13px; @color: (@color-gray + #111); @mr: 0) {
+    line-height: 1;
+    
+    li {
+        display: inline-block;
+        
+        a {
+            display: inline-block;
+            color: @color;
+            i {
+                &:before {
+                    font-size: @fz;
+                    margin-right: @mr;
+                    vertical-align: middle;
+                    .icon-font-type-2();
+                }
+            }
+        }
+    }
+}
+
+.social-form-2(@fz1: 13px; @color1: @color-main; @fz2: 13px; @color2: @color-main; @mr2: 10px) {
+    .social-form-1(@fz2; @color2; @mr2);
+    
+    li a i {
+        color: @color1;
+        font-size: @fz1;
+    }
+}
+
+// ===================
+// 4 Icon
+
+.social-01 {
+    .social-form-1();
+}
+
+// 6 Icon
+.social-02 {
+    .social-form-1();
+}
+
+// Icon + Text
+.social-03 {
+    .social-form-2();
+    i{
+      .font-type-1;
+      font-size:12px !important;
+    }
+}
+
+// Text
+.social-04(@color: @color-main) {
+    a {
+        color: @color;
+        display: inline-block;
+        font-size: @fz-heading-6;
+        .font-type-1();
+    }
+}
+
+.social-04 {
+    .social-04();
+}

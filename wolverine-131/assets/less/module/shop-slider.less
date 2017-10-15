@@ -1,0 +1,159 @@
+// Shop Gallery Carousel (Multiple Items - Slider)
+// ======
+
+.shop-gallery-carousel {
+    margin-bottom: 75px;
+
+    .shop-product-item {
+        .image {
+            position: relative;
+            max-width: 170px;
+            margin-right: auto;
+            margin-left: auto;
+            .bgc-light;
+
+            .overlay {
+                opacity: 0;
+                text-align: center;
+                .overlay(fade(@color-light, 50%));
+
+                ul {
+                    .clearfix();
+                    display: block;
+                    position: absolute;
+                    height: 44px;
+                    top: 0;
+                    bottom: 0;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    width: 100%;
+                    
+                    li {
+                        display: inline-block;
+                        line-height: 0;
+
+                        > a {
+                            .color-light;
+                            width: 44px;
+                            height: 44px;
+                            line-height: 44px;
+                            display: inline-block;
+                            position: relative;
+                            border-radius: 50%;
+                            .bgc-dark;
+
+                            i {
+                                position: absolute;
+                                .pos(0;0;0;0);
+                                margin: auto;
+                                display: block;
+                                line-height: 1;
+                                width: 16px;
+                                height: 16px;
+                                font-size: 16px;
+                            }
+
+                            &:hover {
+                                .bgc-main;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                .overlay {
+                    opacity: 1;
+                }
+            }
+
+            img {
+                width: 170px;
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
+        .name {
+            margin-top: 5px;
+
+            a {
+                display: inline-block;
+                max-width: 170px;
+
+                &:hover {
+                    .color-main;
+                }
+            }
+        }
+    }
+
+    &.caro {
+        .shop-product-item:nth-of-type(2n) {
+            .image {
+                background-color: #EBEBEB;
+            }
+        }
+    }
+
+    .slick-next {
+        right: -30px;
+
+        &:before {
+            content: "\e07e";
+        }
+    }
+
+    .slick-prev {
+        left: -30px;
+
+        &:before {
+            content: "\e031";
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        height: 25px;
+        top: 85px;
+        width: 25px;
+
+        &:before {
+            font-size: 25px;
+            .color-gray;
+            .icon-font-type-1();
+        }
+
+        &:hover:before {
+            .color-dark;
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .slick-next {
+            right: 50%;
+            transform: translateX(36px);
+
+            &:before {
+                content: "\e07f";
+            }
+        }
+
+        .slick-prev {
+            left: 50%;
+            transform: translateX(-36px);
+
+            &:before {
+                content: "\e032";
+            }
+        }
+
+        .slick-prev,
+        .slick-next {
+            bottom: -35px;
+            margin-top: 0;
+            top: auto;
+        }
+    }
+}

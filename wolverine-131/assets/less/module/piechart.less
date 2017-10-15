@@ -1,0 +1,53 @@
+.block-piechart{
+    text-align: center;
+    font-size: @fz-common-4 + 1px;
+    
+    .piechart{
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 35px;
+        .progressbar-text{
+            .font-type-1();
+            font-size: 30px;
+        }
+        path:first-child{
+            stroke: @bgc-gray;
+        }
+        path:last-child{
+            stroke: @color-main;
+        }
+    }
+
+    &.trail-light .piechart path:first-child{
+        stroke: @color-light;
+    }
+
+    &.stroke-dark .piechart path:last-child{
+        stroke : @color-common;
+    }
+
+    &.center-color-main .piechart{
+        .icon , .progressbar-text{
+            color: @color-main !important;;
+        }
+    }
+
+    .piechart-icon{
+        position: relative;
+        .icon{
+            font-size: 52px;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            &:before{
+                display: block;
+            }
+        }
+    }
+    
+    h5{
+        margin-bottom: 0;
+    }
+}

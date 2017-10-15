@@ -1,0 +1,61 @@
+////////////////////////////////////////SCREEN////////////////////////////////////
+@screen-xlg: 1600px;
+@screen-lg: 1230px;
+@screen-md: 992px;
+@screen-sm: 768px;
+@screen-xs: 480px;
+@screen-xs-max: 767px;
+@screen-sm-max: 991px;
+@screen-md-max: 1229px;
+
+// Updates for small tablets and smart phones in landscape
+@xs: ~"only screen and (min-width: @{screen-xs})";
+@xs-max: ~"(max-width: @{screen-xs-max} )";
+
+// Updates for tablets in portrait
+@sm: ~"only screen and (min-width: @{screen-sm} )";
+@sm-max: ~"(max-width: @{screen-sm-max} )";
+
+// Updates for tablets in landscape
+@md: ~"only screen and (min-width: @{screen-md} )";
+@md-max: ~"(max-width: @{screen-md-max} )";
+
+// Updates for desktop
+@lg: ~"only screen and (min-width: @{screen-lg} )";
+
+// Updates for ultra desktop
+@xlg: ~"only screen and (min-width: @screen-xlg)";
+
+////////////////////////////////////////COLOR/////////////////////////////////////
+@color-main: #9c5b57;
+@color-main-2: #518f37;
+@color-light: #fff;
+@color-gray: #999;
+@color-lightgray: #ddd;
+@color-lightgray2: #eee;
+// @color-darkgray: #999;
+@color-heading: #333;
+@color-common: #555;
+@bgc-dark: @color-heading;
+@bgc-light: @color-light;
+@bgc-gray: #f4f4f4;
+
+///////////////////////////////////////ANIMATION////////////////////////////////////
+@duration-time: 0.4s;
+@duration-longtime: 0.7s;
+
+///////////////////////////////////////TYPOGRAPHY////////////////////////////////////
+@base-line-height: 2.2;
+@fz-content: 13px;
+@fz-heading-1: 36px;
+@fz-heading-2: 28px;
+@fz-heading-3: 21px;
+@fz-heading-4: 18px;
+@fz-heading-5: 14px;
+@fz-heading-6: 11px;
+@fz-common-1: @fz-heading-2; //28
+@fz-common-2: @fz-heading-3 - 1px; //21 - 1
+@fz-common-3: @fz-heading-4 - 2px; // 18 -2
+@fz-common-4: @fz-content; //13
+@fz-common-5: @fz-heading-6;
+@fz-common-6: @fz-heading-6 - 1;

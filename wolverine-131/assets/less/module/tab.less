@@ -1,0 +1,175 @@
+.tab-section-01{
+        .content > .tab-pane {
+            display: none;
+        }
+
+        .content > .active {
+            display: block;
+        }
+
+        .content{
+            padding:35px 35px 35px 0;
+            p {
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .tabs {
+            li{
+                display: inline-block;
+                border: 1px solid @color-lightgray;
+
+                a{
+                    display: inline-block;
+                    .font-type-1();
+                    font-size: @fz-heading-6;
+                }
+            }
+        }
+    &.style-1{
+        .tabs {
+            li{
+                margin-right: 5px;
+                a{
+                    background-color: @color-lightgray + #111;
+                    font-size: 11px;
+                    font-weight: 700;
+                    outline: none;
+                    padding: 10px 40px;
+                }
+
+                &.active a, &.active a:focus, &.active a:hover{
+                    .color-light;
+                    .bgc-main;
+                    border-color: @color-main;
+                    cursor: default;
+                }
+
+                &:hover a{
+                    background-color: @color-light;
+                }
+            }
+        }
+    }
+
+    &.style-2 {
+        .content{
+            padding: 35px;
+            border: 1px solid @color-lightgray;
+            border-top: none;
+        }
+
+        .tabs{
+            position: relative;
+            letter-spacing:-4px;
+            text-align: left;
+            border-bottom: 1px solid @color-lightgray;
+
+            >li{
+                letter-spacing: 0;
+                margin-right: -1px;
+                margin-bottom: -1px;
+
+                &:before{
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background-color: transparent;
+                }
+
+                a{
+                    padding: 10px 30px;
+                    &:hover{
+                        background-color: @color-lightgray + #111;
+                    }
+                }
+                
+                &.active{
+                    border-bottom-color: white;
+                    border-top: 1px solid @color-main;
+                     &:before{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background-color: @color-main;
+                    }
+
+                    a, a:hover, a:focus{
+                        cursor: default;
+                        .bgc-light;
+
+                    }
+                }
+            }
+        }
+    }
+    &.style-3 {
+        .content{
+            padding: 35px;
+            border: 1px solid @color-lightgray;
+            border-top: none;
+        }
+
+        .tabs{
+            position: relative;
+            letter-spacing:-4px;
+            text-align: right;
+            border-bottom: 1px solid @color-lightgray;
+            >li{
+                letter-spacing: 0;
+                margin-right: -1px;
+                margin-bottom: -1px;
+
+                &:before{
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background-color: transparent;
+                }
+
+                a{
+                    padding: 10px 30px;
+
+                    &:hover{
+                        background-color: @color-lightgray + #111;
+                    }
+                }
+
+                &.active{
+                    border-bottom-color: white;
+                    border-top: 1px solid @color-main;
+                     &:before{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background-color: @color-main;
+                    }
+
+                    a, a:hover, a:focus{
+                        cursor: default;
+                        .bgc-light;
+                    }
+                }
+            }
+        }
+    }
+
+    @media @xs-max {
+        .tabs {
+            li {
+                display: block;
+                margin-bottom: 20px;
+                a {
+                    width: 100%;
+                    padding: 10px 35px;
+                }
+            }
+        }
+    }
+}
