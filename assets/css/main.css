@@ -621,7 +621,7 @@ html {
 }
 
 .parallax-bg.background-default:after {
-    background-color: rgba(51, 51, 51, 0.7);
+    background-color: rgba(51, 51, 51, 0.4);
     content: "";
     display: block;
     position: absolute;
