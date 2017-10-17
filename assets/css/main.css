@@ -1586,7 +1586,7 @@ input:-webkit-autofill {
 }
 
 .social-02 li a i:before {
-    font-size: 13px;
+    font-size: 21px;
     margin-right: 0;
     vertical-align: middle;
     font-family: FontAwesome;
@@ -2042,7 +2042,7 @@ html[xmlns] .flexslider-custom .slides {
 /* Slick Theme Custom */
 /* Slider */
 .slick-loading .slick-list {
-    background: #ffffff url("../../wolverine-131/assets/images/ajax-loader.gif") center center no-repeat;
+    background: #ffffff url("../../sample/assets/images/ajax-loader.gif") center center no-repeat;
 }
 
 /* Arrows */
@@ -4532,7 +4532,7 @@ nav:after {
 }
 
 .main-nav-2 .nav-social .social-01 li a i:before {
-    font-size: 14px;
+    font-size: 25px;
     margin-right: 0;
     vertical-align: middle;
     font-family: FontAwesome;
@@ -5118,12 +5118,12 @@ body.left-menu .main-nav-wrapper {
 }
 
 .before-main-nav-2-b1 {
-    padding-top: 35px;
-    padding-bottom: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .before-main-nav-2-b1 img {
-    height: 36px;
+    height: 55px;
 }
 
 .before-main-nav-2-b2,
@@ -7649,7 +7649,7 @@ body.left-menu header.site-header .home-fw-slider.style-4 {
 
 @media (max-width: 991px ) {
     .slip-about .item-content-wrapper {
-        background: url("../../wolverine-131/assets/images/slip-bg-3.jpg") no-repeat right top;
+        background: url("../../sample/assets/images/slip-bg-3.jpg") no-repeat right top;
         background-size: cover;
         position: relative;
         z-index: 0;
@@ -7773,7 +7773,7 @@ body.left-menu header.site-header .home-fw-slider.style-4 {
 
 @media (max-width: 991px ) {
     .slip-portfolio .item-content-wrapper {
-        background: url("../../wolverine-131/assets/images/slip-bg-4.jpg") no-repeat right top;
+        background: url("../../sample/assets/images/slip-bg-4.jpg") no-repeat right top;
         background-size: cover;
         position: relative;
         z-index: 0;
@@ -7894,7 +7894,7 @@ body.left-menu header.site-header .home-fw-slider.style-4 {
 
 @media (max-width: 991px ) {
     .slip-service .item-content-wrapper {
-        background: url("../../wolverine-131/assets/images/slip-bg-4.jpg") no-repeat right top;
+        background: url("../../sample/assets/images/slip-bg-4.jpg") no-repeat right top;
         background-size: cover;
         position: relative;
         z-index: 0;
@@ -8014,7 +8014,7 @@ body.left-menu header.site-header .home-fw-slider.style-4 {
 
 @media (max-width: 991px ) {
     .slip-blog .item-content-wrapper {
-        background: url("../../wolverine-131/assets/images/slip-bg-6.jpg") no-repeat right top;
+        background: url("../../sample/assets/images/slip-bg-6.jpg") no-repeat right top;
         background-size: cover;
         position: relative;
         z-index: 0;
@@ -11709,13 +11709,13 @@ section.portfolio-section .isotope-container .remove-col-padding {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.05em;
     margin-bottom: 15px;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .back-to-home:after {
     display: block;
     margin: 0 auto;
-    width: 72px;
+    width: 100px;
     border-top: 1px solid #9c5b57;
     content: "";
 }
@@ -12743,7 +12743,7 @@ footer:after {
 
 .footer-preset-wrapper h5 {
     margin-bottom: 0;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 .footer-preset-02 {
