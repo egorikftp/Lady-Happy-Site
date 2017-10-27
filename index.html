@@ -52,6 +52,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <!--Modernizr js-->
     <script src="sample/vendors/modernizr/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
     <style> .nav-main-menu > li > ul, .nav-shop-cart {
         display: none;
     }</style>
@@ -817,18 +818,19 @@
             <div class="portfolio-group container-fluid remove-col-padding">
                 <div class="row iso-grid">
                     <div class="grid-item portfolio-column col-lg-2 col-md-3 col-sm-4 col-xs-6">
-                        <div class="portfolio-item portfolio-item-2"><img
-                                src="sample/assets/images/portfolio-600-16.jpg" alt="LOVE MY LIFE">
+                        <div class="portfolio-item portfolio-item-2">
+                            <img src="sample/assets/images/portfolio-600-16.jpg" alt="LOVE MY LIFE">
                             <div class="overlay">
                                 <div class="cell-vertical-wrapper">
                                     <div class="cell-middle overlay-content text-center">
                                         <h5 class="heading-icon-1">LOVE MY LIFE</h5>
                                         <div class="font-serif caption">Lorem ipsum dolor sit</div>
-                                        <div class="group-link"><a
-                                                href="sample/portfolio-single-small-slide.html"
-                                                class="icon-link"></a><a
-                                                href="sample/assets/images/portfolio-600-16.jpg"
-                                                class="zoom-link icon-outline-vector-icons-pack-67"></a></div>
+                                        <div class="group-link">
+                                            <a href="sample/portfolio-single-small-slide.html" class="icon-link"></a>
+                                            <a id="1_image" href="sample/assets/images/portfolio-600-16.jpg"
+                                               class="zoom-link icon-outline-vector-icons-pack-67">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1039,23 +1041,16 @@
                     <div class="testimonial-01 simple-slider">
 
                         <div class="testimonial-item">
-                            <div class="item-content">
-                                <!--<p class="comment">&quot; Отзыв 1&quot;</p>
-                                <p class="name text-right">Егорик</p> -->
+                            <div id="feedback-1" class="item-content">
+                                <p class="comment"></p>
+                                <p class="name text-right"></p>
                             </div>
                         </div>
 
                         <div class="testimonial-item">
-                            <div class="item-content">
-                                <!--<p class="comment">&quot; Отзыв 2 &quot;</p>
-                                <p class="name text-right">Михаил</p> -->
-                            </div>
-                        </div>
-
-                        <div class="testimonial-item">
-                            <div class="item-content">
-                                <!--<p class="comment">&quot; Отзыв 3 &quot;</p>
-                                <p class="name text-right">Ольга</p> -->
+                            <div id="feedback-2" class="item-content">
+                                <p class="comment"></p>
+                                <p class="name text-right"></p>
                             </div>
                         </div>
                     </div>
@@ -1139,8 +1134,13 @@
 <script type="text/javascript" src="sample/vendors/img-loaded/imagesloaded.pkgd.min.js"></script>
 
 <!-- Verify -->
+
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+
 <script src="js/countto/jquery.countTo.js"></script>
 <script src="js/smooth-scroll/SmoothScroll.js"></script>
 <script src="js/main.js"></script>
+<script src="js/firebase/feedback.js"></script>
 </body>
 </html>
