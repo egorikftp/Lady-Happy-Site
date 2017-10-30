@@ -16,7 +16,6 @@ docReference
     .get()
     .then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
-            console.log(doc.id, " => ", doc.data());
             setFeedback(doc, idFeedback);
             idFeedback++;
         });
