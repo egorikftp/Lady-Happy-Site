@@ -8748,6 +8748,9 @@ footer .blog-related .blog-related-item {
 /* Instagram */
 .instagram {
     max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .instagram:not(.widget) {
@@ -11723,7 +11726,7 @@ section.portfolio-section .isotope-container .remove-col-padding {
 .page-contact .map-iframe {
     margin-bottom: 15px;
     width: 100%;
-    height: 400px;
+    height: 380px;
     border: #eeeeee;
 }
 
@@ -11767,6 +11770,7 @@ section.portfolio-section .isotope-container .remove-col-padding {
 }
 
 .page-contact h5 {
+    text-align: center;
     color: #9c5b57;
     margin-bottom: 10px;
 }
