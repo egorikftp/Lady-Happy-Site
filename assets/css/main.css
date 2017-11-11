@@ -1254,7 +1254,7 @@ section.large-space {
 }
 
 section.large-space .section-header {
-    margin-bottom: 80px;
+    margin-bottom: 0px;
 }
 
 section.large-space.one-child {
