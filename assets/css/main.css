@@ -1621,6 +1621,16 @@ input:-webkit-autofill {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.05em;
     font-size: 12px !important;
+    padding: 10px;
+}
+
+.social-page-contact {
+    color: #9c5b57;
+    display: inline-block;
+    font-size: 11px;
+    padding: 35px 0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.05em;
 }
 
 .social-04 a {
@@ -12783,6 +12793,11 @@ footer:after {
     text-align: center;
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
+}
+
+.footer-preset-07 {
+    padding: 0 0;
+    text-align: center;
 }
 
 .footer-preset-04 h1 {
